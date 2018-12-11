@@ -51,7 +51,7 @@ class PlayerSubmissionForm extends Component {
         <form className="PlayerSubmissionForm__form" onSubmit={this.onSubmit}>
 
           <div className="PlayerSubmissionForm__poem-inputs">
-
+            The
             <input
               name="adj1"
               placeholder="adjective"
@@ -76,6 +76,7 @@ class PlayerSubmissionForm extends Component {
               type="text"
               value={this.state.verb}
               onChange={this.onFieldChange}/>
+              the
             <input
               name="adj2"
               placeholder="adjective"
@@ -88,6 +89,7 @@ class PlayerSubmissionForm extends Component {
               type="text"
               value={this.state.noun2}
               onChange={this.onFieldChange}/>
+              .
 
           </div>
 
