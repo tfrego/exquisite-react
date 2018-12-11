@@ -11,7 +11,8 @@ class Game extends Component {
 
     this.state = {
       poemLines: [],
-      currentPlayer: 1
+      currentPlayer: 1,
+      lastLine: {},
     }
   }
 
@@ -19,6 +20,7 @@ class Game extends Component {
     const currentGame = this.state;
     currentGame.poemLines.push(newLine);
     currentGame.currentPlayer++;
+    currentGame.lastLine = newLine;
 
     this.setState({currentGame});
     console.log(this.state);
@@ -46,7 +48,7 @@ class Game extends Component {
           { exampleFormat }
         </p>
 
-        <RecentSubmission />
+        <RecentSubmission recentLine={this.state.lastLine}/>
 
         <PlayerSubmissionForm addPoemLineCallback={this.addPoemLine} player={this.state.currentPlayer} />
 
