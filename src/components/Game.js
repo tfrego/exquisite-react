@@ -12,7 +12,7 @@ class Game extends Component {
     this.state = {
       poemLines: [],
       currentPlayer: 1,
-      lastLine: {},
+      lastLine: undefined,
     }
   }
 
