@@ -2,9 +2,10 @@ import React from 'react';
 import './RecentSubmission.css';
 
 const RecentSubmission = (props) => {
-  if (props.recentLine === undefined) {
+  if (props.recentLine === undefined || props.end === true) {
     return null;
   }
+
   const line = `The ${props.recentLine.adj1}
     ${props.recentLine.noun1}
     ${props.recentLine.adv}

@@ -44,6 +44,10 @@ class PlayerSubmissionForm extends Component {
 
   render() {
 
+    if (this.props.end === true) {
+      return null;
+    }
+
     return (
       <div className="PlayerSubmissionForm">
         <h3>Player Submission Form for Player #{this.props.player}</h3>
@@ -105,6 +109,7 @@ class PlayerSubmissionForm extends Component {
 PlayerSubmissionForm.propTypes = {
   addPoemLineCallback: PropTypes.func.isRequired,
   player: PropTypes.number.isRequired,
+  end: PropTypes.bool
 }
 
 export default PlayerSubmissionForm;

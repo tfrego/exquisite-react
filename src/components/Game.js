@@ -13,6 +13,7 @@ class Game extends Component {
       poemLines: [],
       currentPlayer: 1,
       lastLine: undefined,
+      endGame: false,
     }
   }
 
@@ -24,6 +25,13 @@ class Game extends Component {
 
     this.setState({currentGame});
     console.log(this.state);
+  }
+
+  finalPoem = () => {
+    const updateGame = this.state;
+    updateGame.endGame = true;
+
+    this.setState({updateGame});
   }
 
   render() {
@@ -48,11 +56,11 @@ class Game extends Component {
           { exampleFormat }
         </p>
 
-        <RecentSubmission recentLine={this.state.lastLine}/>
+        <RecentSubmission recentLine={this.state.lastLine} end={this.state.endGame}/>
 
-        <PlayerSubmissionForm addPoemLineCallback={this.addPoemLine} player={this.state.currentPlayer} />
+        <PlayerSubmissionForm addPoemLineCallback={this.addPoemLine} player={this.state.currentPlayer} end={this.state.endGame} />
 
-        <FinalPoem poem={this.state.poemLines} />
+        <FinalPoem poem={this.state.poemLines} finalPoemCallback={this.finalPoem} end={this.state.endGame} />
 
       </div>
     );
