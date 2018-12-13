@@ -61,38 +61,44 @@ class PlayerSubmissionForm extends Component {
               placeholder="adjective"
               type="text"
               value={this.state.adj1}
-              onChange={this.onFieldChange}/>
+              onChange={this.onFieldChange}
+              className={ !this.state.adj1 ? "PlayerSubmissionForm__input--invalid" : '' }/>
             <input
               name="noun1"
               placeholder="noun"
               type="text"
               value={this.state.noun1}
-              onChange={this.onFieldChange}/>
+              onChange={this.onFieldChange}
+              className={ !this.state.noun1 ? "PlayerSubmissionForm__input--invalid" : '' }/>
             <input
               name="adv"
               placeholder="adverb"
               type="text"
               value={this.state.adv}
-              onChange={this.onFieldChange}/>
+              onChange={this.onFieldChange}
+              className={ !this.state.adv ? "PlayerSubmissionForm__input--invalid" : '' }/>
             <input
               name="verb"
               placeholder="verb"
               type="text"
               value={this.state.verb}
-              onChange={this.onFieldChange}/>
+              onChange={this.onFieldChange}
+              className={ !this.state.verb ? "PlayerSubmissionForm__input--invalid" : '' }/>
               the
             <input
               name="adj2"
               placeholder="adjective"
               type="text"
               value={this.state.adj2}
-              onChange={this.onFieldChange}/>
+              onChange={this.onFieldChange}
+              className={ !this.state.adj2 ? "PlayerSubmissionForm__input--invalid" : '' }/>
             <input
               name="noun2"
               placeholder="noun"
               type="text"
               value={this.state.noun2}
-              onChange={this.onFieldChange}/>
+              onChange={this.onFieldChange}
+              className={ !this.state.noun2 ? "PlayerSubmissionForm__input--invalid" : '' }/>
               .
 
           </div>
